@@ -4,12 +4,12 @@
 1. [Description du projet, objectifs et livrables](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#1-description-du-projet-objectifs-et-livrables)
 2. [Jauge de Déformation à base de graphite](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#2-jauge-de-d%C3%A9formation-%C3%A0-base-de-graphite)
 3. [PCB Shield](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#3-pcb-shield)
-- 3.1. Choix du circuit amplificateur transimpédance
-- 3.2. Test circuit électrique sur LTSpice
-- 3.3. Réalisation d'un PCB (KiCad)
-- 3.4. Fabrication du SHIELD
-- 3.4.1. Fabrication du PCB
-- 3.4.2. Perçage et soudure
+- [3.1. Choix du circuit amplificateur transimpédance]()
+- [3.2. Test circuit électrique sur LTSpice]()
+- [3.3. Réalisation d'un PCB (KiCad)]()
+- [3.4. Fabrication du SHIELD]()
+- [3.4.1. Fabrication du PCB]()
+- [3.4.2. Perçage et soudure]()
 4. [Code Arduino](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#4-code-arduino)
 5. [APK Arduino](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#5-apk-android)
 6. [Banc de test](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#6-banc-de-test)
@@ -209,13 +209,14 @@ Enfin, nous avons soudé chaque composant à l'aide d'un fer à souder.
 ### 3.4. Fabrication du SHIELD
 #### 3.4.1. Fabrication du PCB
 Le PCB est fabriqué sur une plaquette recouverte d'une fine couche de cuivre, elle même recouverte d'une couche de résine photosensible aux UV.
-Nous avons tout d'abord imprimé notre modélisation du circuit sur un film plastique qui nous sert de calque. 
+Nous avons tout d'abord imprimé notre modélisation du circuit sur un film plastique qui nous sert de masque lors de l'insolation UV.. 
 ![Gerber](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Schield/PDF/Calque.png)
-Une insolation sous UV pendant 2 minutes permet de transposer ce calque sur notre couche de résine, permettant ainsi d'enlever la partie de la résine insolée.
+Une insolation sous UV pendant 2 minutes permet de transposer ce calque sur notre couche de résine, permettant ainsi d'enlever la partie de la résine insolée grâce à un développeur.
 Ensuite, la plaquette a été déposée dans un bain de perchlorure de fer afin d'être gravée (environ 8 minutes). Seule la partie du cuivre non protégée par la résine est décapée.
-Pour finir, de l'acétone a été appliquée sur la plaquette pour éliminer les dernières traces de résine.
+Pour finir, on plonge la plaquette dans l'acétone pour éliminer les dernières traces de résine.
 ## 3.4.2. Perçage et soudure
-Une fois le circuit en cuivre du PCB réalisé, nous avons percé les trous sur notre plaquette à l'aide d'une perçeuse électrique. 
+Une fois le circuit en cuivre du PCB réalisé, nous avons percé les trous sur notre plaquette à l'aide d'une perçeuse électrique. Nous effectuons des tests électriques pour éliminer d'éventuels problème de court-circuit lors de la fabrication du circuit. 
+Enfin, nous soudons tous nos composant à l'aide d'un fer à souder et d'étain. 
 ***
 ## 4. Code Arduino
 Voici le code arduino qui permet d'acquérir les mesures de notre capteur, les afficher sur l'écran OLED et les envoyer par bluetooth à un smatrphone.
@@ -302,13 +303,16 @@ void loop() {
    ecranOLED.print(Res);
    ecranOLED.print(" MOhm \n");
    ecranOLED.display();                            // Transfert le buffer à l'écran
-   delay(1000);
+   delay(500);
    ecranOLED.clearDisplay();
 }
 ```
 ***
 ## 5. APK Android
+Nous avons réalisé une application android, permettant d'afficher les valeurs de résistance mesurées, grâce à l'outil de conception rapide d'application android MIT App Inventor. 
+Voici le schéma en block du code de l'application:
 ![block](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/APK_CapteurGraphite/APKblock.png)
+Voici l'interface de l'application sur un smartphone:
 ![telephone](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/APK_CapteurGraphite/APKtel.png)
 ***
 ## 6. Banc de test
@@ -347,11 +351,21 @@ Les mesures en compression restent valables au dela.
 
 ***
 ## 7. Datasheet
-Voici la [datasheet](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Datasheet_CapteurGraphite/Datasheet_CapteurGraphite.pdf) de notre capteur.
+Voici la [datasheet](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Datasheet_CapteurGraphite/Datasheet_CapteurGraphite.pdf) de notre capteur, comprenant les caractéristiques du capteur et une proposition de conditionnement.
 ***
 ## 8. Solutions d'amélioration
-### Solutions d'amélioration
-- Trouver une méthode pour déposer la même quantité de graphite sur chaque capteur testé
-- Anticiper les besoins du banc de test dans la conception du PCB
-- Trouver un moyen de fixer les pinces sur les electrodes lors des mesures
+
+- Fabrication du capteur: 
+  - Trouver une méthode pour déposer la même quantité de graphite sur chaque capteur testé
+
+- Fabrication du schield PCB:
+  - Anticiper les besoins du banc de test lors de la conception du PCB pour pouvoir réaliser les mesures des résistances et des déformations conjointement
+
+- Fabrication du banc de test
+  - Trouver un moyen de fixer les pinces sur les électrodes lors des mesures pour éviter les déplacements et les variations de résistance parasites
+  - Concevoir le banc de test de sorte à éviter les frottements des pièces mécaniques sur le graphite déposé sur le capteur
+
+- Exploitation du banc de test
+  - Multiplier les tests de répétabilité
+
 ***
