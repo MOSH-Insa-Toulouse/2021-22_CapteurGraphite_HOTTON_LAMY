@@ -1,20 +1,22 @@
 # ProjetCapteurGraphite2022-LM-TL
 ***
 ## Sommaire
-1. [Description du projet, objectifs et livrables](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#1-description-du-projet-objectifs-et-livrables)
-2. [Jauge de Déformation à base de graphite](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#2-jauge-de-d%C3%A9formation-%C3%A0-base-de-graphite)
-3. [PCB Shield](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#3-pcb-shield)
-- [3.1. Choix du circuit amplificateur transimpédance]()
-- [3.2. Test circuit électrique sur LTSpice]()
-- [3.3. Réalisation d'un PCB (KiCad)]()
-- [3.4. Fabrication du SHIELD]()
-- [3.4.1. Fabrication du PCB]()
-- [3.4.2. Perçage et soudure]()
-4. [Code Arduino](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#4-code-arduino)
-5. [APK Arduino](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#5-apk-android)
-6. [Banc de test](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#6-banc-de-test)
-7. [Datasheet](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#7-datasheet)
-8. [Solutions d'amélioration](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/LM#8-solutions-dam%C3%A9lioration)
+1. [Description du projet, objectifs et livrables](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#1-description-du-projet-objectifs-et-livrables)
+- [1.1. Description du projet & objectifs](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#11-description-du-projet-et-objectifs)
+- [1.2. Livrables](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#12-livrables)
+2. [Jauge de Déformation à base de graphite](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#2-jauge-de-d%C3%A9formation-%C3%A0-base-de-graphite)
+3. [PCB Shield](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#3-pcb-shield)
+- [3.1. Choix du circuit amplificateur transimpédance](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#31-choix-du-circuit-amplificateur-transimp%C3%A9dance)
+- [3.2. Test circuit électrique sur LTSpice](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#32-test-circuit-%C3%A9lectrique-sur-ltspice)
+- [3.3. Réalisation d'un PCB (KiCad)](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#33-r%C3%A9alisation-dun-pcb-kicad)
+- [3.4. Fabrication du SHIELD](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#34-fabrication-du-shield)
+- [3.4.1. Fabrication du PCB](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#341-fabrication-du-pcb)
+- [3.4.2. Perçage et soudure](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#342-per%C3%A7age-et-soudure)
+4. [Code Arduino](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#4-code-arduino)
+5. [APK Arduino](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#5-apk-android)
+6. [Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#6-banc-de-test)
+7. [Datasheet](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#7-datasheet)
+8. [Solutions d'amélioration](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/LM#8-solutions-dam%C3%A9lioration)
 
 ***
 ## 1. Description du projet, objectifs et livrables
@@ -57,7 +59,7 @@ Dans notre projet, nous avons utilisé des crayons **HB et B**.
 
 Le principe physique du capteur repose sur l'organisation en **système granulaire** du réseau des nanoparticules de graphite sur le papier.
 
-![Système granulaire](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_README/granulaire.png)
+![Système granulaire](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_README/granulaire.png)
 
 En effet, la **conductance d'un système granulaire** varie en fonction :
 - des **distances internanoparticules**
@@ -83,7 +85,7 @@ Or notre microcontroleur Arduino Uno possède les caractéristiques suivantes:
 La mesure directe d'un courant aussi faible que celui que fourni notre capteur ne parait pas possible.
 
 Nous choisissons d'utiliser la solution d'un amplificateur transimpédance:
-![Solution minimaliste : amplificateur transimpédance](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_README/circuit1.png)
+![Solution minimaliste : amplificateur transimpédance](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_README/circuit1.png)
 Cette solution permet :
 - la conversion courant I -> tension U dans la résistance d'épreuve R1 (shunt)
 - l' amplification à fort gain par montage non-inverseur
@@ -108,7 +110,7 @@ négligeable devant la tension mesurée sur R1 qui sera de 10mV.
 voltage, et maximum offset voltage drift : 0.05µV/°C. Bien comparé aux 10mV aux
 bornes de R1. 
 
-L'[amplificateur opérationel LTC1050C](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Datasheet_LTC1050/Datasheet_LTC1050.pdf) satisfait bien toutes ces contraintes.
+L'[amplificateur opérationel LTC1050C](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Datasheet_LTC1050/Datasheet_LTC1050.pdf) satisfait bien toutes ces contraintes.
 
 **Filtrage:**
 
@@ -120,7 +122,7 @@ Nous décidons de filtrer dans 3 régions de la chaîne de traitement analogique
 - **filtre actif basé sur les amplificateurs opérationnels** : maximum d'efficacité
 - **filtre passif en fin de chaine**, coté ADC, pour retirer le bruit introduit en cours de traitement (bruit d'alimentation, bruit d'horloge des amplificateurs à découpage)
 
-![Amplificateur transimpédance avec filtre](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_README/circuit2.png)
+![Amplificateur transimpédance avec filtre](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_README/circuit2.png)
 
 - **R5** en entrée protège l'ampli opérationnel contre les décharges électrostatiques, en forme avec C1 un filtre pour les bruits en tension
 - **C1 avec R1** forme un **filtre pour le bruit en courant**
@@ -132,35 +134,35 @@ Nous allons maintenant tester ce circuit à l'aide du logiciel d'électronique a
 
 ### 3.2. Test circuit électrique sur LTSpice
 Nous réalisons un schéma de notre circuit d'amplification transimpédance sur LTSpice pour simuler son comportement.
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_README/circuit3.png)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_README/circuit3.png)
 #### Test fonctionalité dans les conditions nominales
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_LTSpice/gain.jpg)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_LTSpice/gain.jpg)
 Dans les conditions nominales, nous obtenons bien un gain de 100 en sortie du circuit amplificateur.
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_LTSpice/courantentrée.jpg)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_LTSpice/courantentrée.jpg)
 Vérification de la tension de sortie avec un pulse de courant d'entrée à 100 nA.
 #### Incidence de l'offset de l'amplificateur
-La [datasheet de l'amplificateur opérationel LTC1050C](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Datasheet_LTC1050/Datasheet_LTC1050.pdf)
+La [datasheet de l'amplificateur opérationel LTC1050C](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Datasheet_LTC1050/Datasheet_LTC1050.pdf)
 nous indique que l'offset de tension en sortie de l'amplificateur est de 5uV. On veut que cet offset soit
 négligeable devant la tension mesurée sur R1 qui sera de 10mV. 
 L'incidence de l'offset de cet amplificateur est donc acceptable.
 #### Incidence du courant d'entrée de l'amplificateur
-La [datasheet de l'amplificateur opérationel LTC1050C](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Datasheet_LTC1050/Datasheet_LTC1050.pdf)
+La [datasheet de l'amplificateur opérationel LTC1050C](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Datasheet_LTC1050/Datasheet_LTC1050.pdf)
 nous indique que l'offset de courant en entrée de l'amplificateur est de +/- 200 pA, bien inférieur à 100nA. 
 On a donc un faible courant d'entrée, très petit devant Isens pour avoir le Isens qui traverse la résistance R1 et
 pas l’entrée de l'amplificatieur.
 L'incidence de l'offset de cet amplificateur est donc acceptable.
 #### Fréquence de coupure de chaque étage de filtre passe-bas
 ##### Etage C1-R1: Filtre pour le bruit en courant
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_LTSpice/C1R1.png)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_LTSpice/C1R1.png)
 - fc = 16 Hz
 ##### Etage C4-R3: Filtre actif
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_LTSpice/C4R3.png)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_LTSpice/C4R3.png)
 - fc = 1,6 Hz
 ##### Etage C2-R6: Filtre de sortie
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_LTSpice/C2R6.png)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_LTSpice/C2R6.png)
 - fc = 1,6 kHz
 #### Atténaution globale d'un bruit en courant à la fréquence de limite de repliement dans le cas de l'ADC Arduino UNO
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_LTSpice/repliement.jpg)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_LTSpice/repliement.jpg)
 On constate qu'il y a une atténuation d'un bruit en courant environ égale à **40dB pour une fréquence autour de 50Hz** et de **100 dB pour un bruit en courant au voisinage de la fréquence de repliement de spectre** (7,7 kHz).
 #### Expression analytique de la résistance du capteur en fonction des éléments du circuit transimpédance
 R1 = 100 000 Ohm
@@ -172,7 +174,7 @@ Vcc = 5 V
 -> Rsens (Ohm) = (1+R3/R2).R1.(Vcc/(Vadc.5/1024))-R1-R4
 
 ### 3.3. Réalisation d'un PCB (KiCad)
-Pour réaliser les schématiques et les empreintes de de nos composants, nous nous servons de leurs [datasheets](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Datasheets_Compsants) en ligne. 
+Pour réaliser les schématiques et les empreintes de de nos composants, nous nous servons de leurs [datasheets](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Datasheets_Compsants) en ligne. 
 Pour faire le PCB, nous avons respecté quelques règles :
 - Largeur de piste: 0.6 mm minimum,
 - Isolation de piste : 0.9mm minimum
@@ -181,17 +183,17 @@ Pour faire le PCB, nous avons respecté quelques règles :
 - Support de l'AOP: pad n°1 rectangulaire, les autres sont ovales ou ronds
 
 #### Schematique et empreinte de l'OLED
-![SchematiqueOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/SchematiqueOLED.png) ![EmpreinteOLED](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/EmpreinteOLED.png)
+![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/SchematiqueOLED.png) ![EmpreinteOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/EmpreinteOLED.png)
 #### Schematique et empreinte du module bluetooth HC-O5
-![SchematiqueBluetooth](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/SchematiqueModuleBluetooth.png) ![EmpreinteBluetooth](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/EmpreinteBluetooth.png)
+![SchematiqueBluetooth](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/SchematiqueModuleBluetooth.png) ![EmpreinteBluetooth](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/EmpreinteBluetooth.png)
 #### Schematique et empreinte de l'encodeur rotatif KY-040
-![SchematiqueEncodeur](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/SchematiqueEncodeurRotatif.png) ![EmpreinteEncodeur](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/EmpreinteEncodeur.png)
+![SchematiqueEncodeur](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/SchematiqueEncodeurRotatif.png) ![EmpreinteEncodeur](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/EmpreinteEncodeur.png)
 #### Schematique et empreinte l'amplificateur opérationel LTC1050
-![SchematiqueAmpliOp](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/SchematiqueAmpliOp.png) ![EmpreinteAmpliOp](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/EmpreinteAmpliOp.png)
+![SchematiqueAmpliOp](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/SchematiqueAmpliOp.png) ![EmpreinteAmpliOp](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/EmpreinteAmpliOp.png)
 #### Schematique et empreinte des pins de la carte Arduino
-![SchematiquePinArduino](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/SchematiquePinArduino.png)
+![SchematiquePinArduino](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/SchematiquePinArduino.png)
 #### Schematique du circuit amplificateur transimpédance
-![SchematiqueCircuitKicad](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/SchematiqueCircuitKicad.png)
+![SchematiqueCircuitKicad](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/SchematiqueCircuitKicad.png)
 
 
 #### Empreinte du PCB complet
@@ -200,21 +202,21 @@ Les masses (GND) sont toutes reliées entre elles par une piscine ce qui permet 
 Il faut faire attention de ne par dessiner de pistes avec des angles droits pour éviter d'éventuels problèmes lors de la fabrication du PCB. 
 
 Enfin, nous avons soudé chaque composant à l'aide d'un fer à souder.
-![EmpreintePCB](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/EmpreintePCB.png)
+![EmpreintePCB](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/EmpreintePCB.png)
 
 #### **Visualisation 3D du PCB entier**
-![Visu3D](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Photos_KiCad/Visu3D.png)
+![Visu3D](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Photos_KiCad/Visu3D.png)
 
 
 ### 3.4. Fabrication du SHIELD
 #### 3.4.1. Fabrication du PCB
 Le PCB est fabriqué sur une plaquette recouverte d'une fine couche de cuivre, elle même recouverte d'une couche de résine photosensible aux UV.
 Nous avons tout d'abord imprimé notre modélisation du circuit sur un film plastique qui nous sert de masque lors de l'insolation UV.. 
-![Gerber](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Schield/PDF/Calque.png)
+![Gerber](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Schield/PDF/Calque.png)
 Une insolation sous UV pendant 2 minutes permet de transposer ce calque sur notre couche de résine, permettant ainsi d'enlever la partie de la résine insolée grâce à un développeur.
 Ensuite, la plaquette a été déposée dans un bain de perchlorure de fer afin d'être gravée (environ 8 minutes). Seule la partie du cuivre non protégée par la résine est décapée.
 Pour finir, on plonge la plaquette dans l'acétone pour éliminer les dernières traces de résine.
-## 3.4.2. Perçage et soudure
+#### 3.4.2. Perçage et soudure
 Une fois le circuit en cuivre du PCB réalisé, nous avons percé les trous sur notre plaquette à l'aide d'une perçeuse électrique. Nous effectuons des tests électriques pour éliminer d'éventuels problème de court-circuit lors de la fabrication du circuit. 
 Enfin, nous soudons tous nos composant à l'aide d'un fer à souder et d'étain. 
 ***
@@ -311,47 +313,47 @@ void loop() {
 ## 5. APK Android
 Nous avons réalisé une application android, permettant d'afficher les valeurs de résistance mesurées, grâce à l'outil de conception rapide d'application android MIT App Inventor. 
 Voici le schéma en block du code de l'application:
-![block](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/APK_CapteurGraphite/APKblock.png)
+![block](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/APK_CapteurGraphite/APKblock.png)
 Voici l'interface de l'application sur un smartphone:
-![telephone](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/APK_CapteurGraphite/APKtel.png)
+![telephone](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/APK_CapteurGraphite/APKtel.png)
 ***
 ## 6. Banc de test
 Nous avons élaborer un banc de test à l'aide d'un servomoteur, du scotch double face et des morceaux de carton et plastique d'empballage. 
 Une partie du capteur est fixée sur le stator à l'aide d'un morceau de carton et d'un scotch double face, et l'autre partie du capteur est maitenue dans l'axe du rotor à l'aide d'un morceau de plastique et de scotch double face.
 
-![Video Banc de test](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/ResultatsBancTest/VideoBanc.mp4)
+![Video Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/ResultatsBancTest/VideoBanc.mp4)
 
-### Premier test : DeltaR/R0 HB Compression
+### Premier test : $\delta$R/R0 HB Compression
 Pour réaliser cette partie, nous avons mesurer 5 cycles de compression que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
-![HBC](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/ResultatsBancTest/HBCompression.png)
+![HBC](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/ResultatsBancTest/HBCompression.png)
 
-### Second test : DeltaR/R0 HB Extension
+### Second test : $\delta$R/R0 HB Extension
 Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
-![HBE](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/ResultatsBancTest/HBExtension.png)
+![HBE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/ResultatsBancTest/HBExtension.png)
 
-### Troisième test : DeltaR/R0 B Compression
+### Troisième test : $\delta$R/R0 B Compression
 Pour réaliser cette partie, nous avons mesurer 5 cycles de compression que nous avons moyenner pour obtenir variation de la résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
-![BC](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/ResultatsBancTest/BCompression.png)
+![BC](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/ResultatsBancTest/BCompression.png)
 
-### Quatrième test : DeltaR/R0 B Extension
+### Quatrième test : $\delta$R/R0 B Extension
 Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
-![BE](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/ResultatsBancTest/BExtension.png)
+![BE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/ResultatsBancTest/BExtension.png)
 
 ### Cinquième test : Répetabilité des mesures HB
 Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs divergentes des premières de plus de 10%.
-![HBR](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/ResultatsBancTest/répétabilitéHB.png)
+![HBR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/ResultatsBancTest/répétabilitéHB.png)
 Nous pouvons voir qu'à partir de à peu près 260 cycles, le capteur ne peut plus garantir de bons résultats en deflexion.
 Les mesures en compression restent valables au dela.
 
 ### Sixième test : Répetabilité des mesures B
 Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs divergentes des premières de plus de 10%.
-![BR](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/ResultatsBancTest/répétabilitéB.png)
+![BR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/ResultatsBancTest/répétabilitéB.png)
 Nous pouvons voir qu'à partir d'une centaine de cycles, le capteur ne peut plus garantir de bons résultats en deflexion.
 Les mesures en compression restent valables au dela.
 
 ***
 ## 7. Datasheet
-Voici la [datasheet](https://github.com/lm-hotton/ProjetCapteurGraphite2022-LM-TL/blob/main/Datasheet_CapteurGraphite/Datasheet_CapteurGraphite.pdf) de notre capteur, comprenant les caractéristiques du capteur et une proposition de conditionnement.
+Voici la [datasheet](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/tree/main/Datasheet_CapteurGraphite/Datasheet_CapteurGraphite.pdf) de notre capteur, comprenant les caractéristiques du capteur et une proposition de conditionnement.
 ***
 ## 8. Solutions d'amélioration
 
