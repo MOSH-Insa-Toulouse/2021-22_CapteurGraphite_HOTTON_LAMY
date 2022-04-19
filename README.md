@@ -77,10 +77,10 @@ Dans notre projet, nous souhaitons mesurer la résistance de notre capteur.
 Nous décidons d'imposer une tension au borne de notre capteur et de mesurer le courant pour en déduire la résistance. 
 Cependant le courant que nous devons mesurer est très faible du nano au micro-ampère.
 Or notre microcontroleur Arduino Uno possède les caractéristiques suivantes:
-- résolution 10 à 12 bits (1024 à 4096 points)
+- résolution 10 bits (1024 points)
 - pleine échelle (VRef) de 1.1 V à 5.0 V
-- impédance de source max 1 kOhm à 10 kOhm
-- fréquence d'échantillonnage max de l'ordre du MHz
+- impédance de source max 1 kOhm
+- fréquence d'échantillonnage max de l'ordre de la dizaine de kHz
 
 La mesure directe d'un courant aussi faible que celui que fourni notre capteur ne parait pas possible.
 
@@ -171,7 +171,7 @@ On constate qu'il y a une atténuation d'un bruit en courant environ égale à *
 - R4 = 10 000 Ohm
 - Vcc = 5 V
 
--> Rsens (Ohm) = (1+R3/R2)(R1/R2)(Vcc/Vadc)-R1-R4
+**-> Rsens (Ohm) = (1+R3/R2)(R1/R2)(Vcc/Vadc)-R1-R4**
 
 ### 3.3. Réalisation d'un PCB (KiCad)
 Pour réaliser les schématiques et les empreintes de de nos composants, nous nous servons de leurs [datasheets](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Datasheets_Compsants) en ligne. 
@@ -217,7 +217,7 @@ Une insolation sous UV pendant 2 minutes permet de transposer ce calque sur notr
 Ensuite, la plaquette a été déposée dans un bain de perchlorure de fer afin d'être gravée (environ 8 minutes). Seule la partie du cuivre non protégée par la résine est décapée.
 Pour finir, on plonge la plaquette dans l'acétone pour éliminer les dernières traces de résine.
 #### 3.4.2. Perçage et soudure
-Une fois le circuit en cuivre du PCB réalisé, nous avons percé les trous sur notre plaquette à l'aide d'une perçeuse électrique. Nous effectuons des tests électriques pour éliminer d'éventuels problème de court-circuit lors de la fabrication du circuit. 
+Une fois le circuit en cuivre du PCB réalisé, nous avons percé les trous sur notre plaquette à l'aide d'une perçeuse électrique. Nous effectuons des tests électriques pour éliminer d'éventuels problèmes de court-circuit lors de la fabrication du circuit. 
 Enfin, nous soudons tous nos composant à l'aide d'un fer à souder et d'étain. 
 ***
 ## 4. Code Arduino
@@ -343,13 +343,13 @@ Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous av
 ![BE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/BExtension.png)
 
 ### Cinquième test : Répetabilité des mesures HB
-Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs différentes des 10 premiers cycles de plus de 5%.
+Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs différentes des 10 premiers cycles de plus de 30%.
 ![HBR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/répétabilitéHB.png)
 Nous pouvons voir qu'à partir de à peu près 260 cycles, le capteur ne peut plus garantir de bons résultats en deflexion.
 Les mesures en compression restent valables au dela.
 
 ### Sixième test : Répetabilité des mesures B
-Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs différentes des 10 premiers cycles de plus de 5%.
+Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs différentes des 10 premiers cycles de plus de 30%.
 ![BR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/répétabilitéB.png)
 Nous pouvons voir qu'à partir d'une centaine de cycles, le capteur ne peut plus garantir de bons résultats en deflexion.
 Les mesures en compression restent valables au dela.
