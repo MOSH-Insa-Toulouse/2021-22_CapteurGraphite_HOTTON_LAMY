@@ -10,8 +10,8 @@
 - [3.2. Test circuit électrique sur LTSpice](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#32-test-circuit-%C3%A9lectrique-sur-ltspice)
 - [3.3. Réalisation d'un PCB (KiCad)](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#33-r%C3%A9alisation-dun-pcb-kicad)
 - [3.4. Fabrication du SHIELD](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#34-fabrication-du-shield)
-- [3.4.1. Fabrication du PCB](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#341-fabrication-du-pcb)
-- [3.4.2. Perçage et soudure](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#342-per%C3%A7age-et-soudure)
+  - [3.4.1. Fabrication du PCB](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#341-fabrication-du-pcb)
+  - [3.4.2. Perçage et soudure](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#342-per%C3%A7age-et-soudure)
 4. [Code Arduino](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#4-code-arduino)
 5. [APK Arduino](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#5-apk-android)
 6. [Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#6-banc-de-test)
@@ -323,19 +323,19 @@ Une partie du capteur est fixée sur le stator à l'aide d'un morceau de carton 
 
 ![Video Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/VideoBanc.mp4)
 
-### Premier test : $\delta$R/R0 HB Compression
+### Premier test : ΔR/R0 HB Compression
 Pour réaliser cette partie, nous avons mesurer 5 cycles de compression que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![HBC](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/HBCompression.png)
 
-### Second test : $\delta$R/R0 HB Extension
+### Second test : ΔR/R0 HB Extension
 Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![HBE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/HBExtension.png)
 
-### Troisième test : $\delta$R/R0 B Compression
+### Troisième test : ΔR/R0 B Compression
 Pour réaliser cette partie, nous avons mesurer 5 cycles de compression que nous avons moyenner pour obtenir variation de la résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![BC](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/BCompression.png)
 
-### Quatrième test : $\delta$R/R0 B Extension
+### Quatrième test : ΔR/R0 B Extension
 Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![BE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/BExtension.png)
 
