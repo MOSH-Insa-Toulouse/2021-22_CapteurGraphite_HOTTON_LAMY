@@ -318,6 +318,9 @@ Voici l'interface de l'application sur un smartphone:
 ![telephone](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/APK_CapteurGraphite/APKtel.png)
 ***
 ## 6. Banc de test
+
+![Video Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Photos_README/banc.jpg)
+
 Nous avons élaborer un banc de test à l'aide d'un servomoteur, du scotch double face et des morceaux de carton et plastique d'empballage. 
 Une partie du capteur est fixée sur le stator à l'aide d'un morceau de carton et d'un scotch double face, et l'autre partie du capteur est maitenue dans l'axe du rotor à l'aide d'un morceau de plastique et de scotch double face.
 
