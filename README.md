@@ -353,7 +353,7 @@ Les mesures en compression restent valables au dela.
 
 ***
 ## 7. Datasheet
-Voici la [datasheet](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Datasheet_CapteurGraphite/Datasheet_CapteurGraphite.pdf) de notre capteur, comprenant les caractéristiques du capteur et une proposition de conditionnement.
+Voici la [datasheet](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Datasheet_CapteurGraphite/Datasheet_GraphiteSensor.pdf) de notre capteur, comprenant les caractéristiques du capteur et une proposition de conditionnement.
 ***
 ## 8. Solutions d'amélioration
 
