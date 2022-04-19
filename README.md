@@ -171,7 +171,8 @@ R3 = 100 000 Ohm
 R4 = 10 000 Ohm
 Vcc = 5 V
 
--> Rsens (Ohm) = (1+$^R3/_R2$)($^R1/_R2$)($^Vcc/_Vadc$)-R1-R4
+-> Rsens (Ohm) = (1+$fracR3/_R2$)($^R1/_R2$)($^Vcc/_Vadc$)-R1-R4
+-> Rsens (Ohm) = (1+$\frac{R3}{R2}$)$\frac{R1}{R2}$$\frac{Vcc}{Vadc}$-R1-R4
 
 ### 3.3. Réalisation d'un PCB (KiCad)
 Pour réaliser les schématiques et les empreintes de de nos composants, nous nous servons de leurs [datasheets](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Datasheets_Compsants) en ligne. 
