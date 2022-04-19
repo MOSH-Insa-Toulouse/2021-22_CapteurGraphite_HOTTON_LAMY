@@ -1,10 +1,10 @@
 # ProjetCapteurGraphite2022-LM-TL
 ***
 ## Sommaire
-1. [Description du projet, objectifs et livrables](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/LM#1-description-du-projet-objectifs-et-livrables)
+1. [Description du projet, objectifs et livrables](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#1-description-du-projet-objectifs-et-livrables)
 - [1.1. Description du projet & objectifs](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#11-description-du-projet-et-objectifs)
 - [1.2. Livrables](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#12-livrables)
-2. [Jauge de Déformation à base de graphite](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/LM#2-jauge-de-d%C3%A9formation-%C3%A0-base-de-graphite)
+2. [Jauge de Déformation à base de graphite](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#2-jauge-de-d%C3%A9formation-%C3%A0-base-de-graphite)
 3. [PCB Shield](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#3-pcb-shield)
 - [3.1. Choix du circuit amplificateur transimpédance](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#31-choix-du-circuit-amplificateur-transimp%C3%A9dance)
 - [3.2. Test circuit électrique sur LTSpice](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#32-test-circuit-%C3%A9lectrique-sur-ltspice)
@@ -340,13 +340,13 @@ Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous av
 ![BE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/BExtension.png)
 
 ### Cinquième test : Répetabilité des mesures HB
-Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs divergentes des premières de plus de 10%.
+Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs différentes des 10 premiers cycles de plus de 5%.
 ![HBR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/répétabilitéHB.png)
 Nous pouvons voir qu'à partir de à peu près 260 cycles, le capteur ne peut plus garantir de bons résultats en deflexion.
 Les mesures en compression restent valables au dela.
 
 ### Sixième test : Répetabilité des mesures B
-Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs divergentes des premières de plus de 10%.
+Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-déflexion jusqu'à obtenir des valeurs différentes des 10 premiers cycles de plus de 5%.
 ![BR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/répétabilitéB.png)
 Nous pouvons voir qu'à partir d'une centaine de cycles, le capteur ne peut plus garantir de bons résultats en deflexion.
 Les mesures en compression restent valables au dela.
