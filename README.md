@@ -165,11 +165,11 @@ L'incidence de l'offset de cet amplificateur est donc acceptable.
 ![SchematiqueOLED](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Photos_LTSpice/repliement.jpg)
 On constate qu'il y a une atténuation d'un bruit en courant environ égale à **40dB pour une fréquence autour de 50Hz** et de **100 dB pour un bruit en courant au voisinage de la fréquence de repliement de spectre** (7,7 kHz).
 #### Expression analytique de la résistance du capteur en fonction des éléments du circuit transimpédance
-R1 = 100 000 Ohm
-R2 = 1000 Ohm
-R3 = 100 000 Ohm
-R4 = 10 000 Ohm
-Vcc = 5 V
+- R1 = 100 000 Ohm
+- R2 = 1000 Ohm
+- R3 = 100 000 Ohm
+- R4 = 10 000 Ohm
+- Vcc = 5 V
 
 -> Rsens (Ohm) = (1+R3/R2)(R1/R2)(Vcc/Vadc)-R1-R4
 
