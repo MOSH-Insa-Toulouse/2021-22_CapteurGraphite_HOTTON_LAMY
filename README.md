@@ -13,7 +13,7 @@
   - [3.4.1. Fabrication du PCB](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#341-fabrication-du-pcb)
   - [3.4.2. Perçage et soudure](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY#342-per%C3%A7age-et-soudure)
 4. [Code Arduino](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#4-code-arduino)
-5. [APK Arduino](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#5-apk-android)
+5. [APK Android](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#5-apk-android)
 6. [Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#6-banc-de-test)
 7. [Datasheet](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#7-datasheet)
 8. [Solutions d'amélioration](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/#8-solutions-dam%C3%A9lioration)
