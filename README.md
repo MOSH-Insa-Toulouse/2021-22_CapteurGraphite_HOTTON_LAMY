@@ -327,19 +327,19 @@ Une partie du capteur est fixée sur le stator à l'aide d'un morceau de carton 
 ![Video Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/VideoBanc.mp4)
 
 ### Premier test : ΔR/R0 HB Compression
-Pour réaliser cette partie, nous avons mesurer 5 cycles de compression que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
+Pour réaliser cette partie, nous avons mesuré 5 cycles de compression que nous avons moyenné pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![HBC](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/HBCompression.png)
 
 ### Second test : ΔR/R0 HB Extension
-Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
+Pour réaliser cette partie, nous avons mesuré 5 cycles d'extension que nous avons moyenné pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![HBE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/HBExtension.png)
 
 ### Troisième test : ΔR/R0 B Compression
-Pour réaliser cette partie, nous avons mesurer 5 cycles de compression que nous avons moyenner pour obtenir variation de la résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
+Pour réaliser cette partie, nous avons mesuré 5 cycles de compression que nous avons moyenné pour obtenir variation de la résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![BC](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/BCompression.png)
 
 ### Quatrième test : ΔR/R0 B Extension
-Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous avons moyenner pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
+Pour réaliser cette partie, nous avons mesurer 5 cycles d'extension que nous avons moyenné pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
 ![BE](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/BExtension.png)
 
 ### Cinquième test : Répetabilité des mesures HB
@@ -353,6 +353,39 @@ Pour réaliser cette partie, nous effectuons plusieurs cycles de compression-dé
 ![BR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/répétabilitéB.png)
 Nous pouvons voir qu'à partir d'une centaine de cycles, le capteur ne peut plus garantir de bons résultats en deflexion.
 Les mesures en compression restent valables au dela.
+
+### Septième test : Comparaison avec un flex sensor commercial : FS L 0055 253 ST
+![BR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/flex1.png)
+![BR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/flex2.png)
+Ce flex sensor est un potentionmètre flexible. La résistance est directement proportionelle à la flexion imposée.
+Attention, ce capteur ne s'utilise que dans un sens (compression).
+Nous réalisons le même protocole que pour nos test de variation relative de la résistance (ΔR/R0) de nos capteurs à base de graphite, ce qui nous donne les résultats suivants:
+![BR](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/flex.png)
+
+**Comparaison de nos deux capteurs:**
+
+- Durée de vie:
+  - FS > 1 000 000 cycles
+  - Capteur graphite 
+    - < 100 cycles
+    - Forte détérioration pour les grands angles
+- Précision
+  - FS
+    - R^2 = 0,95
+    - Réponse non linéaire pour les petits angles
+  - Capteur graphite
+    - R^2 = 0,99
+    - Réponse linéaire sur toute la gamme d'angles: 0 - 90°
+- Conditionneur
+    - FS : simple pont-diviseur de tension
+    - Capteur graphite : nécessite un circuit d'amplification transimpédance
+
+
+**Conclusion:**
+
+Notre capteur est adapté à la mesure des petits angles car :
+- il est précis et linéaire même pour les faibles angles
+- les faibles angles détériorent moins le capteur au cours du temps et permettent donc d'allonger sa durée de vie
 
 ***
 ## 7. Datasheet
