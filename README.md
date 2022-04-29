@@ -324,6 +324,8 @@ Voici l'interface de l'application sur un smartphone:
 Nous avons élaborer un banc de test à l'aide d'un servomoteur, du scotch double face et des morceaux de carton et plastique d'empballage. 
 Une partie du capteur est fixée sur le stator à l'aide d'un morceau de carton et d'un scotch double face, et l'autre partie du capteur est maitenue dans l'axe du rotor à l'aide d'un morceau de plastique et de scotch double face.
 
+![Video Banc de test](https://youtube.com/shorts/wPoYp79jxCE?feature=share)
+
 ![Video Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/VideoBanc.mp4)
 
 ### Premier test : ΔR/R0 HB Compression
