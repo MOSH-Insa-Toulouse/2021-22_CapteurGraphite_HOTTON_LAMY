@@ -319,16 +319,11 @@ Voici l'interface de l'application sur un smartphone:
 ***
 ## 6. Banc de test
 
-![Video Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Photos_README/banc.jpg)
-
 Nous avons élaborer un banc de test à l'aide d'un servomoteur, du scotch double face et des morceaux de carton et plastique d'empballage. 
 Une partie du capteur est fixée sur le stator à l'aide d'un morceau de carton et d'un scotch double face, et l'autre partie du capteur est maitenue dans l'axe du rotor à l'aide d'un morceau de plastique et de scotch double face.
 
+Voici une video du banc de test, cliquez sur l'image pour ouvrir le lien youtube correspondant:
 [![Video banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/Photos_README/banc.jpg)](https://youtube.com/shorts/wPoYp79jxCE?feature=share "Banc de test - Capteur Graphite")
-
-![Video Banc de test](https://youtube.com/shorts/wPoYp79jxCE?feature=share)
-
-![Video Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-22_CapteurGraphite_HOTTON_LAMY/blob/main/ResultatsBancTest/VideoBanc.mp4)
 
 ### Premier test : ΔR/R0 HB Compression
 Pour réaliser cette partie, nous avons mesuré 5 cycles de compression que nous avons moyenné pour obtenir la variation de résistance relative en fonction de l'angle appliqué entre les deux extrémités du capteur.
